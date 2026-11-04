@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JU Campus Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- This tells the browser where to download Three.js from. -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Start / pause screen -->
+  <div id="start-screen">
+    <div class="panel">
+      <h1>JU Campus Explorer</h1>
+      <p class="subtitle">Jahangirnagar University · Savar, Bangladesh</p>
+      <ul class="controls">
+        <li><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> Walk</li>
+        <li><kbd>Shift</kbd> Run</li>
+        <li><kbd>Space</kbd> Jump</li>
+        <li><kbd>Mouse</kbd> Look around</li>
+        <li><kbd>Scroll</kbd> Zoom camera</li>
+        <li><kbd>Esc</kbd> Pause</li>
+      </ul>
+      <button id="play-button">Click to Play</button>
+    </div>
+  </div>
+
+  <!-- Small info box shown while playing -->
+  <div id="hud">
+    <div id="position">x: 0 &nbsp; z: 0</div>
+    <div class="hint">WASD move · Space jump · Shift run · Esc pause</div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
